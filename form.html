@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: calc(50% - 10px);
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <select id="title" name="title" required>
+            <option value="Mr">Mr.</option>
+            <option value="Mrs">Mrs.</option>
+            <option value="Dr">Dr.</option>
+        </select>
+        <hr>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Vanshika" minlength="6" required>
+        <hr>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="shhh" minlength="6" maxlength="20" required>
+        <hr>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="SSquarepants@gmail.com">
+        <hr>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+        <hr>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="0" max="99">
+        <hr>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment" required>
+            <option value="visa">Visa</option>
+            <option value="gpay">GPay</option>
+            <option value="upi">UPI</option>
+        </select>
+        <hr>
+
+        <label for="comment">Comments:</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Enter your comments here..."></textarea>
+        <hr>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <hr>
+
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Subscribe to newsletter</label>
+    </form>
+</body>
+</html>
